@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+
+{% block content %} 
+
+{% if form %}
+    
+
+     <form action="" method="POST" enctype="multipart/form-data">
+         {% csrf_token %} 
+         <table>
+             {{form.as_table}}
+        </table>
+        <input type="submit", value="enviar">
+     </form>
+     {% elif new_product %} 
+
+     <div class="card" style="width: 18rem;">
+        <img src="{{new_product.Imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{new_product.Nombre}}</h5>
+            <p class="card-text">{{new_product.Precio}}</p>
+            <p class="card-text">{{new_product.Detalles}}</p>
+        </div>
+     </div>
+
+    
+{% endif %} 
+
+
+{% endblock %} 
