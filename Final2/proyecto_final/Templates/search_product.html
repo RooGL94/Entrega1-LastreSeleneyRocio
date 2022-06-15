@@ -1,11 +1,6 @@
-{% extends 'base.html %'}
 
-{% block titulo %} 
-     Productos
-{% endblock %}
-
-{% block contenido %}
-<h1> Aca va el contenido de buscar productos</h1>
+{% block content %}
+<h1>Resultado de la búsqueda:</h1>
 <div class="d-flex" style="margin-top:5rem; margin-left:7rem">
      {% for product in products%}
 

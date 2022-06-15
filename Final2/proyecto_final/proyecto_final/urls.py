@@ -19,7 +19,10 @@ from django.urls import path
 from products.views import productos_all, search_product_views
 from products.views import inicio
 from products.views import sobre_nosotros
-from products. views import create_product
+from products.views import create_product
+from products.views import search_product_views
+from products.views import ofertas_all
+from products.views import segunda_mano_all
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -30,7 +33,9 @@ urlpatterns = [
     path('inicio/', inicio, name= 'inicio'),
     path('aboutus/', sobre_nosotros, name= 'aboutus'),
     path('create-product/', create_product, name= 'create-product'),
-    path('search-product/', search_product_views, name= 'search-product-view')
+    path('search-product/', search_product_views, name= 'search-product-view'),
+    path('ofertas/', ofertas_all, name='ofertas'),
+    path('segunda-mano/', segunda_mano_all, name='segunda-mano'),
 ]
 
 

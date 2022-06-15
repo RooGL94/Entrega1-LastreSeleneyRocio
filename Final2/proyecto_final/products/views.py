@@ -8,8 +8,9 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render
 from products.forms import product_form
-from products.models import cositas 
-
+from products.models import cositas
+from products.models import ofertas
+from products.models import segunda_mano
 
 
 def inicio(request):
@@ -45,7 +46,18 @@ def productos_all(request):
 
 
 def search_product_views(request):
-     #product = products.objects.GET()
     products = cositas.objects.filter(Nombre__icontains=request.GET['search'])
     context = {'products':products}
     return render(request, 'search_product.html', context)
+
+def ofertas_all(request):
+    ofertas_all= ofertas.objects.all()
+    context={"ofertas_all":ofertas_all}
+    return render(request, "ofertas.html", context=context)
+
+def segunda_mano_all(request):
+    segunda_mano_all= segunda_mano.objects.all()
+    context= {"segunda_mano_all":segunda_mano_all}
+    return render(request, "segunda_mano.html", context=context)        
+
+
