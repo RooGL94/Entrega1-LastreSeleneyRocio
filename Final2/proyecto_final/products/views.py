@@ -54,6 +54,7 @@ def ofertas_all(request):
     ofertas_all= ofertas.objects.all()
     context={"ofertas_all":ofertas_all}
     return render(request, "ofertas.html", context=context)
+    
 
 def segunda_mano_all(request):
     segunda_mano_all= segunda_mano.objects.all()

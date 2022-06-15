@@ -5,24 +5,23 @@
 <h1>Esta es nuestra sección de peluches usados pero en buen estado!</h1>
 
 
-<div class="d-flex" style="margin-top:5rem ; margin-left: 7rem">
-  {% for producto in productos_all %}
-  <div class="card" style="width: 18rem;">
-    {% if producto.Imagen %}
-    <img src={{producto.Imagen.url}} class="card-img-top" alt="...">
-    {% endif %}
-    <div class="card-body">
-      <h5 class="card-title">{{producto.objetos}}</h5>
-      <p class="card-text">precio: ${{producto.descuento}}</p>
-      <p class="card-text">Descripcion: {{producto.requisito}}</p>
-      <a href="#" class="btn btn-primary">Comprar</a>
-      <!-- Acan el el Href habria que agregar un url de carrito de compra por ej -->
-    </div>
+<div class="card" style="width: 18rem;">
+  <img src="https://pcdepotmty.com/wp-content/uploads/2022/04/oso-2.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Oso Gigante</h5>
+    <p class="card-text">Oso usado por un niño pero era tan grande que el niño le tenia miedo y sus padres lo tuvieron que vender.</p>
+    <a href="#" class="btn btn-primary">Comprar!</a>
   </div>
-  {% endfor %}
 </div>
 
-
+<div class="card" style="width: 18rem;">
+  <img src="https://www.eltiempo.com/files/article_content/files/crop/uploads/2020/08/14/5f36b5cdd99d6.r_1597437793993.0-0-980-737.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Muñeca de trapo</h5>
+    <p class="card-text">La niña que era dueña de esta muñeca dice que caminaba por las noches, pero no se preocupe! nosotros le juramos que con 3 padres nuestros se le pasa!.</p>
+    <a href="#" class="btn btn-primary">Comprar!</a>
+  </div>
+</div>
 
 
 
