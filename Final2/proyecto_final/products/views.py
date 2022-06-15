@@ -46,6 +46,6 @@ def productos_all(request):
 
 def search_product_views(request):
      #product = products.objects.GET()
-    products = products.objects.filter(name = request.GET['name'])
+    products = cositas.objects.filter(Nombre__icontains=request.GET['search'])
     context = {'products':products}
     return render(request, 'search_product.html', context)

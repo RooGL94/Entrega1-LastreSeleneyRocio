@@ -30,7 +30,7 @@ urlpatterns = [
     path('inicio/', inicio, name= 'inicio'),
     path('aboutus/', sobre_nosotros, name= 'aboutus'),
     path('create-product/', create_product, name= 'create-product'),
-    path('search-product/', search_product_views, name= 'search_product_views')
+    path('search-product/', search_product_views, name= 'search-product-view')
 ]
 
 
