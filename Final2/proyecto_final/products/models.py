@@ -26,6 +26,7 @@ class segunda_mano(models.Model):
     class Meta:
         verbose_name = "segunda mano"
 
+
     
     
 

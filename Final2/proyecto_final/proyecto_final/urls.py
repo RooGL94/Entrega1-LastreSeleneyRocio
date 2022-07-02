@@ -25,17 +25,26 @@ from products.views import ofertas_all
 from products.views import segunda_mano_all
 from django.conf import settings
 from django.conf.urls.static import static
+from products.views import login_view
+from products.views import logout_view
+from products.views import register_view
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', productos_all, name = 'productos'),
-    path('inicio/', inicio, name= 'inicio'),
+    path('', inicio, name= 'inicio'),
     path('aboutus/', sobre_nosotros, name= 'aboutus'),
     path('create-product/', create_product, name= 'create-product'),
     path('search-product/', search_product_views, name= 'search-product-view'),
     path('ofertas/', ofertas_all, name='ofertas'),
     path('segunda-mano/', segunda_mano_all, name='segunda-mano'),
+
+
+    path('login/', login_view, name= 'login'),
+    path('logout/', logout_view, name= 'logout'),
+    path('registrar/', register_view, name = 'registrar'),
 ]
 
 
