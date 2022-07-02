@@ -94,13 +94,13 @@ def create_product(request):
         form = product_form(request.POST, request.FILES)
         if form.is_valid():
             new_product = cositas.objects.create(
-                Nombre= form.cleaned_data['Nombre'],
-                Precio= form.cleaned_data['Precio'],
-                Detalles= form.cleaned_data['Detalles'],
-                Imagen= form.cleaned_data ['Imagen']
+                Nombre= form.cleaned_data['nombre'],
+                Precio= form.cleaned_data['precio'],
+                Detalles= form.cleaned_data['detalles'],
+                Imagen= form.cleaned_data ['imagen']
             )
             context = {'new_product':new_product}
-        return render(request, 'create_product.html', context=context)  
+        return render(request, 'create_product.html', context=context)
 
 
 
